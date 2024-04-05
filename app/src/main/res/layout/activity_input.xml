@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00293A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:entries="@array/gender_options"
+            android:background="@drawable/spinner" />
+
+        <Button
+            android:id="@+id/btnPredict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:backgroundTint="#00B4FF"
+            android:fontFamily="@font/andada"
+            android:foregroundTint="@color/white"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/predict"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

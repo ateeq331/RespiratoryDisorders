@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339169663646",
+    "project_id": "final-year-project-6bf6b",
+    "storage_bucket": "final-year-project-6bf6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339169663646:android:f2775e303a9f3d7ce3f98f",
+        "android_client_info": {
+          "package_name": "com.example.respiratorydisorders"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGnKbUp3EpX7bD4v7iVZGIsyDHAdt4SxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

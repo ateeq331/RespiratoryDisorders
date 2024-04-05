@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Respiratory Disorders</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="email">Email</string>
+    <string name="predict">Predict</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="toggle_password_visibility">Toggle Password Visibility</string>
+    <string name="mail">Email</string>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+</resources>
+
