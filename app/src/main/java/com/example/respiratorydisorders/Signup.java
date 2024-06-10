@@ -118,8 +118,8 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    FirebaseUser user = mAuth.getCurrentUser();
-                    Toast.makeText(Signup.this, "Registered Successfuly", Toast.LENGTH_SHORT).show();
+                    mAuth.getCurrentUser();
+                    Toast.makeText(Signup.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(Signup.this, Login.class);
                     startActivity(intent);

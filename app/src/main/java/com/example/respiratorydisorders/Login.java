@@ -75,7 +75,6 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 validateAndLogin();
-
             }
         });
 
@@ -87,9 +86,10 @@ public class Login extends AppCompatActivity {
                 startActivity(new Intent(Login.this, Signup.class));
             }
         };
-        // Set the clickable span to the "Sign Up" text
-        spannableString.setSpan(clickableSpan, signUpText.indexOf("Sign Up"), signUpText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
+
+        // Set the clickable span to the "SignUp" text
+        spannableString.setSpan(clickableSpan, signUpText.indexOf("Sign Up"), signUpText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         // Set the SpannableString to the TextView
         signUpTextView.setText(spannableString);
         signUpTextView.setMovementMethod(LinkMovementMethod.getInstance());
@@ -100,7 +100,6 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle click event for "Forgot Password?"
                 startActivity(new Intent(Login.this, Forgot.class));
-
             }
         });
     }
@@ -129,7 +128,7 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(Login.this, "Sign in successful", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(Login.this, Input.class));
+                            startActivity(new Intent(Login.this, Start.class));
                             finish(); // Finish the LoginActivity to prevent going back to it
                         } else {
                             // If sign in fails, display a message to the user.
@@ -138,20 +137,17 @@ public class Login extends AppCompatActivity {
                         }
                     }
                 });
-
-
     }
-
 
 
     private boolean isValidEmail(CharSequence email) {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
+
     private boolean isValidPassword(String password) {
         return password.length() >= 6;
     }
-
     private void togglePasswordVisibility() {
         if (passwordVisible) {
             // Hide the password
@@ -165,6 +161,4 @@ public class Login extends AppCompatActivity {
         }
         passwordVisible = !passwordVisible;
     }
-
-
 }

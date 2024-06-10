@@ -29,7 +29,7 @@
         app:cardCornerRadius="15dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="#006088"
@@ -38,46 +38,37 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Forgot your Password?"
+                android:text="We try to keep you"
                 android:textSize="30dp"
                 android:layout_marginTop="30dp"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="#FFFF" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Healthy"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#00293A" />
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:hint="@string/mail"
-        android:paddingLeft="10dp"
-        android:background="@drawable/edit_txt"
-        android:drawableStart="@drawable/mail_ic"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="20dp" />
-
-    <Button
-        android:id="@+id/buttonResetPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset Password"
-        android:layout_gravity="center"
-        android:textColor="#FFFFFF"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="8dp"
-        android:backgroundTint="#00B4FF"
-        android:foregroundTint="@color/white"
-        android:paddingBottom="8dp"
-        android:layout_margin="8dp"
-        android:textAllCaps="false"
-        android:layout_marginBottom="15dp"
-        android:textSize="16sp"  />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lets Start"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00B4FF"
+        android:foregroundTint="@color/white"
+        android:layout_margin="108dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"  />
 
 </LinearLayout>

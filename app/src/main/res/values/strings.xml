@@ -10,6 +10,7 @@
     <string name="password">Password</string>
     <string name="toggle_password_visibility">Toggle Password Visibility</string>
     <string name="mail">Email</string>
+    <string name="respiratory_disorders">Respiratory Disorders</string>
 
     <string-array name="gender_options">
         <item>Male</item>

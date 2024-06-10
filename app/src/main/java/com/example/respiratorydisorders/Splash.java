@@ -46,7 +46,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 // Start the next activity after the animation ends
-                Intent intent = new Intent(Splash.this, Login.class);
+                Intent intent = new Intent(Splash.this, Signup.class);
                 startActivity(intent);
                 finish(); // Finish the current activity to prevent going back to it on pressing back button
             }

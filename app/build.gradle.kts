@@ -31,7 +31,7 @@ android {
 
 dependencies {
 
-    implementation ("org.tensorflow:tensorflow-lite:2.6.0")
+    //noinspection UseTomlInstead
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
