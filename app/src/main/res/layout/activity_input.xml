@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00293A"
@@ -10,8 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Respiratory Disorders"
-        android:textSize="40dp"
+        android:text="@string/respiratory_disorde"
+        android:textSize="40sp"
         android:layout_marginTop="30dp"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -35,7 +34,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gender:"
+            android:text="@string/gender_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginTop="30dp"
@@ -52,7 +51,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Age:"
+            android:text="@string/age_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp" />
@@ -63,14 +62,14 @@
             android:layout_height="50dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/spinner"
-            android:hint="Enter Age"
+            android:hint="@string/enter_age_"
             android:paddingLeft="10dp"
             android:inputType="number" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Diagnosis Age:"
+            android:text="@string/diagnosis_age_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -78,13 +77,13 @@
             android:id="@+id/diagnosisAgeSpinner"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/spinner"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Blood Group:"
+            android:text="@string/blood_group_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -93,12 +92,12 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginBottom="16dp"
-            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
             android:background="@drawable/spinner" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Birth Order:"
+            android:text="@string/birth_order_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -111,7 +110,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Marital Status:"
+            android:text="@string/marital_status_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -124,7 +123,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lifestyle:"
+            android:text="@string/lifestyle"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -137,7 +136,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Weight:"
+            android:text="@string/weight_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -148,12 +147,12 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/spinner"
             android:hint="@string/enter_weight"
-            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
             android:inputType="number" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Obesity:"
+            android:text="@string/obesity_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -166,7 +165,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Obesity in Family:"
+            android:text="@string/obesity_in_family_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -179,7 +178,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fast Food:"
+            android:text="@string/fast_food_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -193,7 +192,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Smoking:"
+            android:text="@string/smoking_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -206,7 +205,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="High BP:"
+            android:text="@string/high_bp_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -219,7 +218,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Diabetes:"
+            android:text="@string/diabetes_"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="40dp"/>
@@ -248,16 +247,6 @@
             android:textColor="#00293A"
             android:textSize="16sp" />
 
-
-        <TextView
-            android:id="@+id/textViewPredictionResult"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:text="Prediction Result will be shown here"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="18sp" />
 
 
     </LinearLayout>

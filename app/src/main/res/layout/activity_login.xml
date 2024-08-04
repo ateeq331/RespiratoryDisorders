@@ -20,10 +20,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Respiratory Disorders"
+        android:text="@string/respiratory_disorderss"
         android:textAlignment="center"
         android:textColor="#00B4FF"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
 
@@ -44,10 +44,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Get Started"
+                android:text="@string/get_started"
                 android:textAlignment="center"
                 android:textColor="#FFFF"
-                android:textSize="40dp"
+                android:textSize="40sp"
                 android:textStyle="bold" />
 
             <EditText

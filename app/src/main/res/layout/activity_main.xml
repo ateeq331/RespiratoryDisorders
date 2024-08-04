@@ -9,8 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Respiratory Disorders"
-        android:textSize="40dp"
+        android:text="@string/respiratory_disorder"
+        android:textSize="40sp"
         android:layout_marginTop="30dp"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -32,7 +32,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gender:"
+            android:text="@string/gender"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginTop="30dp"
@@ -48,7 +48,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Age:"
+            android:text="@string/age"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -58,15 +58,15 @@
             android:layout_height="50dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/spinner"
-            android:hint="Enter Age"
-            android:paddingLeft="10dp"
+            android:hint="@string/enter_age"
+            android:paddingStart="10dp"
             android:inputType="number" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Diagnosis Age:"
+            android:text="@string/diagnosis_age"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp"/>
@@ -77,14 +77,14 @@
             android:id="@+id/diagnosisAgeSpinner"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/spinner"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Blood Group:"
+            android:text="@string/blood_group"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -100,7 +100,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Birth Order:"
+            android:text="@string/birth_order"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -116,7 +116,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Marital Status:"
+            android:text="@string/marital_status"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -132,7 +132,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lifestlye:"
+            android:text="@string/lifestlye"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -148,7 +148,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Weight:"
+            android:text="@string/weight"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -160,13 +160,13 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/spinner"
             android:hint="@string/enter_weight"
-            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
             android:inputType="number"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Obesity:"
+            android:text="@string/obesity"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -182,7 +182,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Obesity in Family:"
+            android:text="@string/obesity_in_family"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -199,7 +199,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fast Food:"
+            android:text="@string/fast_food"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -216,7 +216,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Smoking:"
+            android:text="@string/smoking"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -232,7 +232,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="High BP:"
+            android:text="@string/high_bp"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
@@ -250,7 +250,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Diabetes:"
+            android:text="@string/diabetes"
             android:textSize="15sp"
             android:textColor="#FFFF"
             android:layout_marginStart="20dp" />
