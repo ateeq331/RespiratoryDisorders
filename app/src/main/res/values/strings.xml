@@ -11,10 +11,85 @@
     <string name="toggle_password_visibility">Toggle Password Visibility</string>
     <string name="mail">Email</string>
     <string name="respiratory_disorders">Respiratory Disorders</string>
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+    <string name="enter_weight">Enter Weight</string>
 
     <string-array name="gender_options">
         <item>Male</item>
         <item>Female</item>
+    </string-array>
+
+    <string-array name="diagnosis_age_options">
+    <item>0–9 years</item>
+    <item>10–19 years</item>
+    <item>20–29 years</item>
+    <item>30–39 years</item>
+    <item>40–49 years</item>
+    <item>50–59 years</item>
+    <item>60–69 years</item>
+    <item>70+ years</item>
+    </string-array>
+
+    <string-array name="blood_group_options">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="birth_order_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+
+    <string-array name="marital_status_options">
+        <item>Married</item>
+        <item>Unmarried</item>
+    </string-array>
+
+
+    <string-array name="lifestyle_options">
+        <item>Very Active</item>
+        <item>Moderately Active</item>
+        <item>Slightly Active</item>
+        <item>Inactive</item>
+        <item>Not Specified</item>
+    </string-array>
+
+
+    <string-array name="obesity_options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+    <string-array name="obesity_in_family_options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <!-- Other arrays -->
+    <string-array name="yes_no_options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="smoking_options">
+        <item>Smoker</item>
+        <item>Non-Smoker</item>
     </string-array>
 
 </resources>

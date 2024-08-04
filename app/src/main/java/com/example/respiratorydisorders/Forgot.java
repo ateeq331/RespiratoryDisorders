@@ -19,7 +19,6 @@ public class Forgot extends AppCompatActivity {
 
 
     private EditText editTextEmail;
-    private Button buttonResetPassword;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -29,7 +28,7 @@ public class Forgot extends AppCompatActivity {
         setContentView(R.layout.activity_forgot);
 
         editTextEmail = findViewById(R.id.editTextEmail);
-        buttonResetPassword = findViewById(R.id.buttonResetPassword);
+        Button buttonResetPassword = findViewById(R.id.buttonResetPassword);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -66,9 +65,6 @@ public class Forgot extends AppCompatActivity {
                         }
                     }
                 });
-
-}
-
-
+    }
 }
 

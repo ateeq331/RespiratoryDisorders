@@ -1,17 +1,14 @@
 package com.example.respiratorydisorders;
 
-import static android.content.ContentValues.TAG;
+
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -19,13 +16,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -39,10 +33,6 @@ public class Login extends AppCompatActivity {
     private ImageView imageViewShowPassword;
     private boolean passwordVisible = false;
     private FirebaseAuth mAuth;
-    private TextView forgotPasswordTextView;
-
-
-
 
 
     @SuppressLint("MissingInflatedId")
@@ -55,11 +45,21 @@ public class Login extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
 
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            // User is already signed in, redirect to main activity
+            Intent intent = new Intent(Login.this, Start.class); // Replace MainActivity with your main activity
+            startActivity(intent);
+            finish();
+            return;
+        }
+
+
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         imageViewShowPassword = findViewById(R.id.imageViewShowPassword);
         Button button = findViewById(R.id.signInButton);
-        forgotPasswordTextView = findViewById(R.id.forgotPasswordTextView);
+        TextView forgotPasswordTextView = findViewById(R.id.forgotPasswordTextView);
         TextView signUpTextView = findViewById(R.id.signUpTextView);
         String signUpText = "Don't have an account? Sign Up";
 
@@ -78,18 +78,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        SpannableString spannableString = new SpannableString(signUpText);
-        ClickableSpan clickableSpan = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
-                // Handle click event, redirect user to SignUpActivity
-                startActivity(new Intent(Login.this, Signup.class));
-            }
-        };
-
-
-        // Set the clickable span to the "SignUp" text
-        spannableString.setSpan(clickableSpan, signUpText.indexOf("Sign Up"), signUpText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        SpannableString spannableString = getSpannableString(signUpText);
         // Set the SpannableString to the TextView
         signUpTextView.setText(spannableString);
         signUpTextView.setMovementMethod(LinkMovementMethod.getInstance());
@@ -102,6 +91,22 @@ public class Login extends AppCompatActivity {
                 startActivity(new Intent(Login.this, Forgot.class));
             }
         });
+    }
+
+    private @NonNull SpannableString getSpannableString(String signUpText) {
+        SpannableString spannableString = new SpannableString(signUpText);
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                // Handle click event, redirect user to SignUpActivity
+                startActivity(new Intent(Login.this, Signup.class));
+            }
+        };
+
+
+        // Set the clickable span to the "SignUp" text
+        spannableString.setSpan(clickableSpan, signUpText.indexOf("Sign Up"), signUpText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        return spannableString;
     }
 
 
@@ -132,7 +137,7 @@ public class Login extends AppCompatActivity {
                             finish(); // Finish the LoginActivity to prevent going back to it
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(Login.this, "Authentication failed. " + task.getException().getMessage(),
+                            Toast.makeText(Login.this,  task.getException().getMessage(),
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

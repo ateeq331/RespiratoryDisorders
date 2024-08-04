@@ -1,9 +1,7 @@
 package com.example.respiratorydisorders;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ClickableSpan;
@@ -14,17 +12,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.SignInMethodQueryResult;
+
 
 
 public class Signup extends AppCompatActivity {
@@ -35,9 +31,6 @@ public class Signup extends AppCompatActivity {
     private boolean passwordVisible = false;
 
 
-    
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +39,16 @@ public class Signup extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
+
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            // User is already signed in, redirect to main activity
+            Intent intent = new Intent(Signup.this, Start.class); // Replace MainActivity with your main activity
+            startActivity(intent);
+            finish();
+            return;
+        }
 
 
         emailEditText = findViewById(R.id.emailEditText);
@@ -114,11 +117,11 @@ public class Signup extends AppCompatActivity {
         }
 
         // Here you would implement your Firebase Authentication code to sign up the user
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    mAuth.getCurrentUser();
                     Toast.makeText(Signup.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(Signup.this, Login.class);
@@ -126,7 +129,7 @@ public class Signup extends AppCompatActivity {
                     finish();
                 }
                 else{
-                    Toast.makeText(Signup.this, "Registration Failed! Check your Internet or  Account maybe exists already ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Signup.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -1,34 +1,35 @@
 package com.example.respiratorydisorders;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import java.util.ArrayList;
 
 public class Results extends AppCompatActivity {
-
-    private ListView valuesListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_results);
+        setContentView(R.layout.activity_results); // Assuming your XML layout file is activity_result.xml
+
+        TextView resultTextView = findViewById(R.id.resultTextView);
+        Button backButton = findViewById(R.id.backButton);
+
 
         // Get the prediction result from the intent
-        String prediction = getIntent().getStringExtra("prediction");
+        String predictionResult = getIntent().getStringExtra("PREDICTION_RESULT");
 
-        // Find the TextView and set the prediction result
-        TextView predictionTextView = findViewById(R.id.predictionTextView);
-        predictionTextView.setText(prediction);
+        // Set the prediction result to the TextView
+        resultTextView.setText(predictionResult);
 
+        // Set click listener for the back button
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Go back to the previous activity
+                finish();
+            }
+        });
     }
 }
